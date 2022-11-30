@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Week6ModuleChallenge" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Joon Ruiz" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 6 Challenge</title>
+    <!--Import Tailwind-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Google font roboto import-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!--Style.css Import-->
+    <link rel="stylesheet" href="./assets/style.css" />
+    <!--Applying font to html tag-->
+    <style>
+      html {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Header to display title of the page-->
+    <header id="page-title" class="flex flex-row justify-center h-32">
+      <h1 class="text-2xl">Weather News</h1>
+    </header>
+    <!--Form to search cities-->
+    <section class="flex flex-col justify-center">
+      <form class="flex content-center">
+        <p id="time-date"></p>
+        <input class="w-40" type="text" placeholder="Search for a city." autofocus />
+        <button type="submit">Enter</button>
+      </form>
+      <div class="flex flex-row justify-center">
+        <ul id="search-history"></ul>
+      </div>
+    </section>
+    <!--Display weather of cities that user have searched-->
+    <section>
+      <div id="weather-display">
+        <ul id="add-weather"></ul>
+      </div>
+    </section>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
