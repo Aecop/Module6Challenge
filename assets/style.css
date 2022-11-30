@@ -1,0 +1,17 @@
+:root {
+    --cBlue: cornflowerblue
+    --lightText: #fff
+}
+
+#page-title {
+    display: flex;
+    justify-content: center;
+    background: var(--cBlue);
+    padding: 10px;
+
+}
+
+h1 {
+    letter-spacing: 5px;
+    color: var(--lightText);
+}
