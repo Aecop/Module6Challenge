@@ -173,7 +173,6 @@ $(function () {
     retriveJson.push(keyItem);
     localStorage.setItem("dkey", JSON.stringify(retriveJson)) || [];
     let getLocalItem = JSON.parse(localStorage.getItem("dkey")) || [];
-
     for (var i = 0; i < getLocalItem.length; i++) {
       let creatBnt = document.createElement("li");
       creatBnt.append(getLocalItem[i].city);
@@ -185,7 +184,7 @@ $(function () {
     userParam = cityInput.val();
     completeApi = requestUrl + userParam + param1;
   });
-
+  //Eventlistener to delete and erase search history.
   clearSearch.on("click", function () {
     localStorage.clear();
     searchHistory.empty();
