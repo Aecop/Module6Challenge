@@ -16,7 +16,12 @@
     />
     <!--Style.css Import-->
     <link rel="stylesheet" href="./assets/style.css" />
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>    <!--Applying font to html tag-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <!--Applying font to html tag-->
     <style>
       html {
         font-family: "Roboto", sans-serif;
@@ -32,10 +37,16 @@
     <div class="container">
       <form class="form-box">
         <p id="time-date"></p>
-        <input id="city-input" type="text" placeholder="Search for a city." autofocus />
+        <input
+          id="city-input"
+          type="text"
+          placeholder="Search for a city."
+          autofocus
+        />
         <button id="btn" type="submit">Enter</button>
       </form>
       <div class="history-container">
+        <button id="clearHistory" type="submit">Clear Search History</button>
         <ul id="search-history"></ul>
       </div>
     </div>
@@ -50,7 +61,6 @@
         </div>
       </div>
       <div>
-
         <div id="fiveWeather">
           <p class="showP">Next Five Days</p>
           <p id="fiveWeatherIcon"></p>
