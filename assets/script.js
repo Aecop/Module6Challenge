@@ -1,16 +1,21 @@
+// Function will run once html is fully loaded.
 $(function () {
-    // Global variables
+        // Global variables
     let cityInput = $('#city-input')
     let btnEle = $('#btn')
     let fiveWeather = $('#fiveWeather')
     let weatherDiv = $('#weather-display')
     let userParam = cityInput.val()
     let fiveWeatherIcon = $('#fiveWeatherIcon')
+    let currentWeather = $('#current-weather')
+
+        // IMG address
     let cloudsIcon = 'https://img.icons8.com/dotty/512/clouds.png'
     let rainIcon = 'https://img.icons8.com/dotty/512/heavy-rain.png'
     let sunnyIcon = 'https://img.icons8.com/dotty/512/sun.png'
     let thunderIcon = 'https://img.icons8.com/dotty/512/storm.png'
     let snowIcon  = 'https://img.icons8.com/dotty/512/snow.png'
+
         //API PARAMS
     let requestUrl = 'http://api.openweathermap.org/geo/1.0/direct?q='
     let param1 = '&limit=5&appid=a763be4befc9d6fd3981fb3420b2dcb0'
@@ -51,11 +56,13 @@ $(function () {
                         let weather = info.list[0].weather[0].main
                         let temperture = info.list[0].main.temp
                         let humidity = info.list[0].main.humidity
-                        // appending varibles to the weather display
+
+                        // appending variables to the weather display
                         let currWeather = $('#curr-weather').append('Today Weather Is: ' + weather)
                         let currTemp = $('#curr-temp').append('Current Temperture Is: ' + temperture + ' °F')
                         let currHumid = $('#curr-humidity').append('Humidity Today is: ' + humidity + '%')
 
+                        // If condition to check the weather data and append img src of correct img to display on html
                         if (weather === 'Clouds'){
                             $(document).ready(function() {
                                 $(`<img src='${cloudsIcon}' style="height: 50px; width: 50px;">`).appendTo('#container');
@@ -78,7 +85,8 @@ $(function () {
                             });
                         }
 
-                        // Display 5 days weather forecast of the city.
+
+                        // Display 5 days weather forecast of the city using For loops to grab data by var i
                         for (var i = 0; i < 5; i ++){
 
                             let fiveDayWeather = info.list[i + 1].weather[0].main
@@ -124,6 +132,8 @@ $(function () {
     btnEle.on('click', function(e){
         e.preventDefault();
         getApi(completeApi)
+        $('.showP').css('display', 'block')
+        currentWeather.attr('id', 'current-weatherB')
     })
 
     cityInput.on('keyup', function(){
