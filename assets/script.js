@@ -14,6 +14,9 @@ $(function () {
   let searchHistory = $("#search-history");
   let clearSearch = $("#clearHistory");
 
+  let lan = ""
+  let lon = ""
+
   let retriveJson = JSON.parse(localStorage.getItem("dkey")) || [];
 
   // IMG address
@@ -24,7 +27,7 @@ $(function () {
   let snowIcon = "https://img.icons8.com/dotty/512/snow.png";
 
   //API PARAMS
-  let requestUrl = "http://api.openweathermap.org/geo/1.0/direct?q=";
+  let requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q=";
   let param1 = "&limit=5&appid=a763be4befc9d6fd3981fb3420b2dcb0";
   let completeApi = requestUrl + userParam + param1;
   let weatherurl = "http://api.openweathermap.org/data/2.5/forecast?lat=";
@@ -161,6 +164,8 @@ $(function () {
   // Trigger API call and display class="showP".
   btnEle.on("click", function (e) {
     e.preventDefault();
+    lat = jdsjdks
+    long =jkdsljd
     getApi(completeApi);
     $(".showP").css("display", "block");
     currentWeather.attr("id", "current-weatherB");
