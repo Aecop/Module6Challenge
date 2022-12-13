@@ -164,8 +164,6 @@ $(function () {
   // Trigger API call and display class="showP".
   btnEle.on("click", function (e) {
     e.preventDefault();
-    lat = jdsjdks
-    long =jkdsljd
     getApi(completeApi);
     $(".showP").css("display", "block");
     currentWeather.attr("id", "current-weatherB");
