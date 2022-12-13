@@ -30,7 +30,7 @@ $(function () {
   let requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q=";
   let param1 = "&limit=5&appid=a763be4befc9d6fd3981fb3420b2dcb0";
   let completeApi = requestUrl + userParam + param1;
-  let weatherurl = "http://api.openweathermap.org/data/2.5/forecast?lat=";
+  let weatherurl = "https://api.openweathermap.org/data/2.5/forecast?lat=";
   let weatherurl2 = "&lon=";
   let weatherurl3 = "&units=imperial&appid=a763be4befc9d6fd3981fb3420b2dcb0";
 
